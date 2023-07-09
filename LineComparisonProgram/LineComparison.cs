@@ -10,6 +10,7 @@ namespace LineComparisonProgram
     {
         public void CalculateLengthOfLine()
         {
+            Console.WriteLine("Enter the coordinates for the First line:");
             Console.WriteLine("Enter the coordinates of the First point X1:");
             double x1 = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Enter the coordinates of the First point Y1:");
@@ -19,9 +20,32 @@ namespace LineComparisonProgram
             Console.WriteLine("Enter the coordinates of the Second point Y2:");
             double y2 = Convert.ToDouble(Console.ReadLine());
 
-            double LengthOfLine = Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2));
-            Console.WriteLine("The Length Of Line is:" + LengthOfLine);
+            Console.WriteLine("Enter the coordinates for the Second line:");
+            Console.WriteLine("Enter the coordinates of the First point X3:");
+            double x3 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter the coordinates of the First point Y3:");
+            double y3 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter the coordinates of the Second point x4:");
+            double x4 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter the coordinates of the Second point Y4:");
+            double y4 = Convert.ToDouble(Console.ReadLine());
 
+            double LengthOfLine = Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2));
+            Console.WriteLine("The Length Of Line 1 is:" + LengthOfLine);
+
+            double LengthOfLine2 = Math.Sqrt(Math.Pow(x4 - x3, 2) + Math.Pow(y4 - y3, 2));
+            Console.WriteLine("The Length Of Line 2 is:" + LengthOfLine2);
+
+            bool equalityCheck = LengthOfLine.Equals(LengthOfLine2);
+
+            if (equalityCheck == true)
+            {
+                Console.WriteLine("Lengths of line 1 and line 2 are equal");
+            }
+            else
+            {
+                Console.WriteLine("Lengths of line 1 and line 2 are not equal");
+            }
         }
     }
 }
